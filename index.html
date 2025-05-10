@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StyleNest - Fashion Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff7f0;
+  color: #2c2c2c;
+}
+
+header {
+  background-color: #1f2937;
+  color: #fff;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+.logo span {
+  color: #ff8a5b;
+}
+
+nav a {
+  color: #f3f3f3;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #ffb28a;
+}
+
+.hero {
+  background: linear-gradient(to right, #ffe5d9, #ffcdb2);
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  color: #1f2937;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+.btn {
+  background-color: #ff8a5b;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background-color: #e57b4a;
+}
+
+.collection {
+  padding: 60px 40px;
+  text-align: center;
+}
+.collection h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #1f2937;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+.card img {
+  width: 100%;
+  border-radius: 15px;
+}
+.card h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+.card p {
+  color: #ff8a5b;
+  font-weight: bold;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.about, .contact {
+  padding: 50px 40px;
+  text-align: center;
+}
+.about h2, .contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.about p {
+  max-width: 700px;
+  margin: auto;
+  color: #444;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+form input, form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+form button {
+  background-color: #ff8a5b;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+form button:hover {
+  background-color: #e57b4a;
+}
+
+footer {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Style<span>Nest</span></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#collection">Collection</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Where Fashion Begins</h1>
+      <p>Discover modern trends for Men, Women & Kids</p>
+      <a href="#collection" class="btn">Browse Collection</a>
+    </div>
+  </section>
+
+  <section id="collection" class="collection">
+    <h2>Featured Styles</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.pexels.com/photos/7679468/pexels-photo-7679468.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Men's Jacket" />
+        <h3>Men's Jacket</h3>
+        <p>Rs. 3,499</p>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/11926097/pexels-photo-11926097.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Women's Dress" />
+        <h3>Women's Dress</h3>
+        <p>Rs. 2,899</p>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/1648377/pexels-photo-1648377.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Kids Outfit" />
+        <h3>Children's Outfit</h3>
+        <p>Rs. 1,199</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      StyleNest brings you high-quality fashion wear crafted with elegance and care.
+      We believe in blending comfort with contemporary designs for every age.
+    </p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 StyleNest. All rights reserved.</p>
+  </footer>
+</body>
+</html>
